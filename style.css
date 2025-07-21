@@ -1,0 +1,134 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background with image */
+body {
+  height: 100vh;
+  background: url('https://i.pinimg.com/1200x/2d/e2/eb/2de2ebafe1fac0a14c7ad326098cf03f.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dark overlay for better text visibility */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dark layer */
+  z-index: 0;
+}
+
+/* Slot machine container */
+.machine {
+  position: relative;
+  z-index: 1; 
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 208, 0, 0.8),
+              0 0 60px rgba(255, 0, 111, 0.6);
+  max-width: 600px;
+  width: 90%;
+  border: 3px solid gold;
+  border: 4px solid #ffd700;
+  box-shadow: 0 0 20px #ffd700, 0 0 40px #ffae00, 0 0 60px #ff8000;
+  animation: borderGlow 0s infinite alternate;
+  padding-bottom: 100px;
+}
+@keyframes borderGlow {
+  from {
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffcc00, 0 0 30px #ffae00;
+    border-color: #ffd700;
+  }
+  to {
+    box-shadow: 0 0 25px #ffee00, 0 0 45px #ff9900, 0 0 60px #ff6600;
+    border-color: #ffdd00;
+  }
+}
+
+
+/* Jackpot glowing heading */
+h1.glow {
+  font-size: 2rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #160101,
+               0 0 20px #ffd700,
+               0 0 30px #d32f12,
+               0 0 40px #ea2914;
+  margin-bottom: 20px;
+}
+
+/* Story text */
+.story {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #fff5cc;
+}
+
+/* Label */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Input */
+input {
+  padding: 12px;
+  border-radius: 0px;
+  border: none;
+  width: 220px;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Button with glow animation */
+.spin-btn {
+  background: linear-gradient(45deg, #ffcc00, #ff6600);
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffcc00,
+              0 0 20px #ff6600;
+  transition: transform 0.2s ease;
+  animation: glow 1.5s infinite alternate;
+}
+
+.spin-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Glow animation */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #ffcc00, 0 0 20px #ff6600;
+  }
+  to {
+    box-shadow: 0 0 25px #ffee00, 0 0 45px #ff3300;
+  }
+}
+.riddle {
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #ffe699;
+  font-family:'Times New Roman', Times, serif;
+}
